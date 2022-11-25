@@ -1,20 +1,12 @@
-# Singular - Simple and Clean Theme for Hugo
+# hugo singular
 
-![](images/screenshot.jpg)
+This is a fork of [this](https://github.com/yasuoza/hugo-theme-singular) great template.
 
-## Development
+I really like this template because of how simple it is, but there's some small things I've changed:
 
-```
-git clone https://github.com/yasuoza/hugo-theme-singular.git singular
-cd singular
-make docker/server   # Requires docker
-open localhost:1313  # or open http://localhost:1313 in browser manually
-```
+- The colour scheme
+- Alignment of header and footer to content, I didn't like that they were left aligned
+- Prettier formatting on touched files
+- Likely more to come as I find it, however because it's so good already I can't imagine I'll change much more
 
-## LICENSE
-
-- GNU General Public License v2 or later
-
-## Acknowledgements
-
-Singular is developed based on [Integer](https://ja.wordpress.org/themes/integer/) theme for wordpress.
+Go give singular some love!

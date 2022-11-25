@@ -13,16 +13,19 @@ Base Theme Author URI:  https://themepatio.com/
  * Variables
  */
 
-$color__background-body: #fff;
-$color__accent: #03a9f4;
-$color__headings: #1e1e1e;
-$color__text: #222;
-$color__text-light: #a7a7a7;
+$color__background-body: #2b2733;
+$color__background-body-light: #342f3d;
+$color__accent: #8cc2dd;
+$color__headings: #ffffff;
+$color__text: #ffffff;
+$color__text-light: #ffffff;
 $color__gray: #e8e8e8;
 $color__success: #1fc281;
 $color__info: #00b9f2;
 $color__warning: #f4cc31;
 $color__danger: #e83337;
+
+$font__standard: "Open Sans", sans-serif;
 
 /**
  * Normalize
@@ -40,7 +43,7 @@ html {
   box-sizing: border-box;
   height: 100%;
   font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font__standard;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -159,9 +162,9 @@ select {
 }
 
 button,
-html input[type='button'],
-input[type='reset'],
-input[type='submit'] {
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
 }
@@ -181,18 +184,18 @@ input {
   line-height: normal;
 }
 
-input[type='checkbox'],
-input[type='radio'] {
+input[type="checkbox"],
+input[type="radio"] {
   padding: 0;
 }
 
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -240,7 +243,7 @@ h6 {
   margin-top: 0;
   margin-bottom: 1.25rem;
   color: $color__headings;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font__standard;
   line-height: 1.1;
 }
 
@@ -295,14 +298,11 @@ a {
   background-color: transparent;
   color: $color__text-light;
   text-decoration: none;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 }
 
 a:hover,
 a:active {
   outline: 0;
-  color: $color__accent;
   text-decoration: none;
 }
 
@@ -320,16 +320,16 @@ blockquote {
   margin-inline-end: 1rem;
   color: $color__headings;
   border-left: 3px solid $color__gray;
-  quotes: '' '';
+  quotes: "" "";
   font-style: italic;
   // font-size: 1.5rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font__standard;
   line-height: 1.125;
 }
 
 blockquote::before,
 blockquote::after {
-  content: '';
+  content: "";
 }
 
 blockquote p {
@@ -343,7 +343,7 @@ blockquote cite {
   letter-spacing: 2px;
   font-style: normal;
   font-size: 0.625rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font__standard;
   line-height: 1.125;
 }
 
@@ -422,7 +422,7 @@ pre {
   padding: 1rem;
   max-width: 100%;
   word-wrap: initial;
-  font-family: Courier, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+  font-family: Courier, "Andale Mono", "DejaVu Sans Mono", monospace;
   background-color: rgba($color__gray, 0.2) !important;
 }
 
@@ -432,7 +432,7 @@ samp,
 tt,
 var {
   border-radius: 3px;
-  font-family: Courier, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+  font-family: Courier, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
 /**
@@ -443,9 +443,9 @@ var {
 
 .btn,
 button,
-input[type='button'],
-input[type='reset'],
-input[type='submit'] {
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   display: inline-block;
   margin: 0;
   padding: 0.75rem 1rem;
@@ -468,9 +468,9 @@ input[type='submit'] {
 
 .btn:hover,
 button:hover,
-input[type='button']:hover,
-input[type='reset']:hover,
-input[type='submit']:hover {
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
   -webkit-box-shadow: inset 0 0 108px rgba(255, 255, 255, 0.5);
   box-shadow: inset 0 0 108px rgba(255, 255, 255, 0.5);
   text-decoration: none;
@@ -478,9 +478,9 @@ input[type='submit']:hover {
 
 .btn:active,
 button:active,
-input[type='button']:active,
-input[type='reset']:active,
-input[type='submit']:active {
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
   outline: 0;
   -webkit-box-shadow: inset 0 0 108px rgba(255, 255, 255, 0.5);
   box-shadow: inset 0 0 108px rgba(255, 255, 255, 0.5);
@@ -489,9 +489,9 @@ input[type='submit']:active {
 
 .btn:focus,
 button:focus,
-input[type='button']:focus,
-input[type='reset']:focus,
-input[type='submit']:focus {
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
   outline: thin dotted;
   outline-offset: -2px;
   -webkit-box-shadow: inset 0 0 108px rgba(255, 255, 255, 0.2);
@@ -531,19 +531,19 @@ input[type='submit']:focus {
 
 /* Forms */
 
-input[type='text'],
-input[type='email'],
-input[type='url'],
-input[type='password'],
-input[type='search'],
-input[type='number'],
-input[type='date'],
-input[type='datetime'],
-input[type='datetime-local'],
-input[type='month'],
-input[type='time'],
-input[type='week'],
-input[type='tel'],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="tel"],
 textarea {
   padding: 0.75rem 1rem;
   width: 100%;
@@ -559,19 +559,19 @@ textarea {
   -webkit-appearance: none;
 }
 
-input[type='text']:focus,
-input[type='email']:focus,
-input[type='url']:focus,
-input[type='password']:focus,
-input[type='search']:focus,
-input[type='number']:focus,
-input[type='date']:focus,
-input[type='datetime']:focus,
-input[type='datetime-local']:focus,
-input[type='month']:focus,
-input[type='time']:focus,
-input[type='week']:focus,
-input[type='tel']:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="tel"]:focus,
 textarea:focus {
   outline: 0;
   border-color: $color__accent;
@@ -627,7 +627,7 @@ input:focus:-ms-input-placeholder {
   display: block;
 }
 
-.post-password-form input[type='submit'] {
+.post-password-form input[type="submit"] {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -643,7 +643,7 @@ input:focus:-ms-input-placeholder {
   right: 0;
 }
 
-input[type='submit'].search-submit {
+input[type="submit"].search-submit {
   border-color: $color__accent;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -776,7 +776,7 @@ p > video {
 #infinite-handle::after {
   display: table;
   clear: both;
-  content: '';
+  content: "";
 }
 
 /**
@@ -787,7 +787,9 @@ p > video {
 
 .site-header {
   position: relative;
-  padding: 2rem 1.5rem;
+  padding: 2rem 2rem 4rem 2rem;
+  margin: 0 auto;
+  max-width: 768px;
 }
 
 .admin-bar .site-header.site-header--fixed {
@@ -837,37 +839,30 @@ a.custom-logo-link:focus {
   margin: 0;
   font-weight: 800;
   font-size: 1rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font__standard;
   line-height: 1.35;
 }
 
 .site-title a {
-  background-image: -webkit-gradient(linear, left top, right top, from($color__headings), to($color__headings));
-  background-image: linear-gradient(to right, $color__headings 0%, $color__headings 100%);
-  background-position: bottom 0 center;
-  background-size: 100% 2px;
-  background-repeat: repeat-x;
   color: $color__headings;
   text-decoration: none;
-  text-shadow: 0.05em 0 0 $color__background-body, -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body, 0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body, -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body, 0 -0.1em 0 $color__background-body;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  text-shadow: 0.05em 0 0 $color__background-body,
+    -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body,
+    0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body,
+    -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body,
+    0 -0.1em 0 $color__background-body;
 }
 
 .site-title a:hover,
 .site-title a:focus {
   outline: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from($color__accent), to($color__accent));
-  background-image: linear-gradient(to right, $color__accent 0%, $color__accent 100%);
-  background-size: 100% 4px;
-  color: $color__accent;
 }
 
 .site-description {
   margin-bottom: 0;
   font-weight: normal;
   font-size: 0.75rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font__standard;
   opacity: 0.5;
 }
 
@@ -902,8 +897,10 @@ a.custom-logo-link:focus {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 4rem 3rem 2rem;
+  padding: 4rem 2rem 2rem;
   font-size: 0.88em;
+  margin: 0 auto;
+  max-width: 702px;
 }
 
 .site-footer__menu {
@@ -931,11 +928,6 @@ a.custom-logo-link:focus {
   color: $color__text-light;
 }
 
-.footer-menu a:hover,
-.footer-menu a:focus {
-  color: $color__accent;
-}
-
 .footer-menu a svg {
   margin-right: 0.5rem;
   width: 1rem;
@@ -947,25 +939,42 @@ a.custom-logo-link:focus {
 }
 
 .site-copy a {
-  background-image: -webkit-gradient(linear, left top, right top, from($color__text-light)), to($color__text-light);
-  background-image: linear-gradient(to right, $color__text-light) 0%, $color__text-light 100%;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from($color__text-light)
+    ),
+    to($color__text-light);
+  background-image: linear-gradient(to right, $color__text-light) 0%,
+    $color__text-light 100%;
   background-position: bottom 0 center;
   background-size: 100% 2px;
   background-repeat: repeat-x;
   color: $color__text-light;
   text-decoration: none;
-  text-shadow: 0.05em 0 0 $color__background-body, -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body, 0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body, -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body, 0 -0.1em 0 $color__background-body;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  text-shadow: 0.05em 0 0 $color__background-body,
+    -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body,
+    0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body,
+    -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body,
+    0 -0.1em 0 $color__background-body;
 }
 
 .site-copy a:hover,
 .site-copy a:focus {
   outline: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from($color__accent), to($color__accent));
-  background-image: linear-gradient(to right, $color__accent 0%, $color__accent 100%);
-  background-size: 100% 4px;
-  color: $color__accent;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from($color__accent),
+    to($color__accent)
+  );
+  background-image: linear-gradient(
+    to right,
+    $color__accent 0%,
+    $color__accent 100%
+  );
 }
 
 /* Primary Menu */
@@ -1020,16 +1029,11 @@ a.custom-logo-link:focus {
   color: $color__text;
 }
 
-.primary-menu__list-item a:hover {
-  color: $color__accent;
-}
-
 .primary-menu__list-item a:focus {
   outline: 0;
   outline-offset: 0;
   -webkit-box-shadow: 0 0 0 2px $color__accent;
   box-shadow: 0 0 0 2px $color__accent;
-  color: $color__accent;
 }
 
 button.sub-menu-toggle {
@@ -1042,8 +1046,6 @@ button.sub-menu-toggle {
   background-color: transparent;
   font-size: 16px;
   line-height: 1.5;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
 }
 
 button.sub-menu-toggle:hover {
@@ -1116,14 +1118,9 @@ button.sub-menu-toggle:focus {
 /* Pagination */
 
 .pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  max-width: 702px;
+  margin: 0 auto;
+  padding: 0rem 2rem;
 }
 
 .pagination__item {
@@ -1144,6 +1141,7 @@ button.sub-menu-toggle:focus {
 
 .pagination .nav-links {
   display: flex;
+  margin-left: -3px;
 }
 
 .pagination__item:not(.pagination__item--prev):not(.pagination__item--next) {
@@ -1152,15 +1150,13 @@ button.sub-menu-toggle:focus {
 
 a.pagination__item:hover {
   border-color: $color__accent;
-  background-color: $color__accent;
-  color: #fff;
+  color: $color__accent;
 }
 
 a.pagination__item:focus {
   outline: none;
   border-color: $color__accent;
-  background-color: $color__accent;
-  color: #fff;
+  color: $color__accent;
 }
 
 .pagination__item svg {
@@ -1288,7 +1284,6 @@ a.pagination__item:focus {
 .widget a:hover,
 .widget a:active,
 .widget a:focus {
-  color: $color__accent;
   opacity: 1;
 }
 
@@ -1401,13 +1396,13 @@ a.pagination__item:focus {
   width: 100%;
 }
 
-.widget.jetpack_subscription_widget #subscribe-email input[type='email'] {
+.widget.jetpack_subscription_widget #subscribe-email input[type="email"] {
   width: 100%;
   border-color: $color__background-body;
   background-color: $color__background-body;
 }
 
-.widget.jetpack_subscription_widget #subscribe-email input[type='email']:focus {
+.widget.jetpack_subscription_widget #subscribe-email input[type="email"]:focus {
   border-color: $color__accent;
 }
 
@@ -1416,7 +1411,7 @@ a.pagination__item:focus {
   width: 100%;
 }
 
-.widget.jetpack_subscription_widget #subscribe-submit input[type='submit'] {
+.widget.jetpack_subscription_widget #subscribe-submit input[type="submit"] {
   width: 100%;
   border-color: $color__accent;
   background-color: $color__accent;
@@ -1467,6 +1462,12 @@ a.pagination__item:focus {
 
 .entry-meta {
   font-size: 0.875rem;
+  max-width: 702px;
+  margin: 0 auto;
+}
+
+.entry-meta-index {
+  padding: 1rem 0 0 0rem;
 }
 
 .entry-meta-item {
@@ -1477,17 +1478,17 @@ a.pagination__item:focus {
 
 .entry-meta-item::after {
   margin-left: 0.5em;
-  content: '\00B7';
+  content: "\00B7";
 }
 
 .entry-meta-item.last::after {
   margin: 0 0 0 0.5em;
-  content: '\00B7';
+  content: "\00B7";
 }
 
 .entry-meta-item:last-child::after {
   margin: 0;
-  content: '';
+  content: "";
 }
 
 .entry-meta-item a {
@@ -1545,23 +1546,33 @@ a.pagination__item:focus {
 }
 
 .entry-meta-before-title .entry-meta-item.cat-links a {
-  background-image: -webkit-gradient(linear, left top, right top, from($color__accent), to($color__accent));
-  background-image: linear-gradient(to right, $color__accent 0%, $color__accent 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from($color__accent),
+    to($color__accent)
+  );
+  background-image: linear-gradient(
+    to right,
+    $color__accent 0%,
+    $color__accent 100%
+  );
   background-position: bottom 0 center;
   background-size: 100% 2px;
   background-repeat: repeat-x;
   color: $color__accent;
   text-decoration: none;
-  text-shadow: 0.05em 0 0 $color__background-body, -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body, 0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body, -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body, 0 -0.1em 0 $color__background-body;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  text-shadow: 0.05em 0 0 $color__background-body,
+    -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body,
+    0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body,
+    -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body,
+    0 -0.1em 0 $color__background-body;
 }
 
 .entry-meta-before-title .entry-meta-item.cat-links a:hover,
 .entry-meta-before-title .entry-meta-item.cat-links a:focus {
   outline: 0;
-  background-size: 100% 4px;
-  color: $color__accent;
 }
 
 .entry-author {
@@ -1601,23 +1612,33 @@ a.pagination__item:focus {
 }
 
 .entry-author .author-url a {
-  background-image: -webkit-gradient(linear, left top, right top, from($color__accent), to($color__accent));
-  background-image: linear-gradient(to right, $color__accent 0%, $color__accent 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from($color__accent),
+    to($color__accent)
+  );
+  background-image: linear-gradient(
+    to right,
+    $color__accent 0%,
+    $color__accent 100%
+  );
   background-position: bottom 0 center;
   background-size: 100% 2px;
   background-repeat: repeat-x;
   color: $color__accent;
   text-decoration: none;
-  text-shadow: 0.05em 0 0 $color__background-body, -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body, 0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body, -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body, 0 -0.1em 0 $color__background-body;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  text-shadow: 0.05em 0 0 $color__background-body,
+    -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body,
+    0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body,
+    -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body,
+    0 -0.1em 0 $color__background-body;
 }
 
 .entry-author .author-url a:hover,
 .entry-author .author-url a:focus {
   outline: 0;
-  background-size: 100% 4px;
-  color: $color__accent;
 }
 
 /* Comments */
@@ -1690,23 +1711,33 @@ a.pagination__item:focus {
 }
 
 .comment-author .fn a {
-  background-image: -webkit-gradient(linear, left top, right top, from($color__accent), to($color__accent));
-  background-image: linear-gradient(to right, $color__accent 0%, $color__accent 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from($color__accent),
+    to($color__accent)
+  );
+  background-image: linear-gradient(
+    to right,
+    $color__accent 0%,
+    $color__accent 100%
+  );
   background-position: bottom 0 center;
   background-size: 100% 2px;
   background-repeat: repeat-x;
   color: $color__accent;
   text-decoration: none;
-  text-shadow: 0.05em 0 0 $color__background-body, -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body, 0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body, -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body, 0 -0.1em 0 $color__background-body;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  text-shadow: 0.05em 0 0 $color__background-body,
+    -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body,
+    0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body,
+    -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body,
+    0 -0.1em 0 $color__background-body;
 }
 
 .comment-author .fn a:hover,
 .comment-author .fn a:focus {
   outline: 0;
-  background-size: 100% 4px;
-  color: $color__accent;
 }
 
 .comment-metadata {
@@ -1750,24 +1781,34 @@ a.pagination__item:focus {
 }
 
 .comment-content a {
-  background-image: -webkit-gradient(linear, left top, right top, from($color__accent), to($color__accent));
-  background-image: linear-gradient(to right, $color__accent 0%, $color__accent 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from($color__accent),
+    to($color__accent)
+  );
+  background-image: linear-gradient(
+    to right,
+    $color__accent 0%,
+    $color__accent 100%
+  );
   background-position: bottom 0 center;
   background-size: 100% 2px;
   background-repeat: repeat-x;
   color: $color__accent;
   text-decoration: none;
-  text-shadow: 0.05em 0 0 $color__background-body, -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body, 0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body, -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body, 0 -0.1em 0 $color__background-body;
+  text-shadow: 0.05em 0 0 $color__background-body,
+    -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body,
+    0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body,
+    -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body,
+    0 -0.1em 0 $color__background-body;
   word-wrap: break-word;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 }
 
 .comment-content a:hover,
 .comment-content a:focus {
   outline: 0;
-  background-size: 100% 4px;
-  color: $color__accent;
 }
 
 .bypostauthor {
@@ -1827,11 +1868,11 @@ a.pagination__item:focus {
 /* Post Navigation (Next/Previous Post) */
 
 .post-navigation {
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
   max-width: 702px;
 }
 
@@ -1842,23 +1883,33 @@ a.pagination__item:focus {
 }
 
 .post-navigation .nav-links a {
-  background-image: -webkit-gradient(linear, left top, right top, from($color__accent), to($color__accent));
-  background-image: linear-gradient(to right, $color__accent 0%, $color__accent 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from($color__accent),
+    to($color__accent)
+  );
+  background-image: linear-gradient(
+    to right,
+    $color__accent 0%,
+    $color__accent 100%
+  );
   background-position: bottom 0 center;
   background-size: 100% 2px;
   background-repeat: repeat-x;
   color: $color__accent;
   text-decoration: none;
-  text-shadow: 0.05em 0 0 $color__background-body, -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body, 0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body, -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body, 0 -0.1em 0 $color__background-body;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  text-shadow: 0.05em 0 0 $color__background-body,
+    -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body,
+    0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body,
+    -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body,
+    0 -0.1em 0 $color__background-body;
 }
 
 .post-navigation .nav-links a:hover,
 .post-navigation .nav-links a:focus {
   outline: 0;
-  background-size: 100% 4px;
-  color: $color__accent;
 }
 
 .post-navigation .nav-nxt {
@@ -1867,12 +1918,12 @@ a.pagination__item:focus {
 
 .post-navigation .nav-pre span::before {
   margin: 0 0.25em 0 0;
-  content: '\2190';
+  content: "\2190";
 }
 
 .post-navigation .nav-nxt span::after {
   margin: 0 0 0 0.25em;
-  content: '\2192';
+  content: "\2192";
 }
 
 /**
@@ -1933,33 +1984,38 @@ a.pagination__item:focus {
   color: $color__headings;
 }
 
-.posts-item__title a:hover,
-.posts-item__title a:focus {
-  color: $color__accent;
-}
-
 .posts-item .entry-meta {
   margin-bottom: 1.325rem;
 }
 
 .posts-item__content a {
-  background-image: -webkit-gradient(linear, left top, right top, from($color__accent), to($color__accent));
-  background-image: linear-gradient(to right, $color__accent 0%, $color__accent 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from($color__accent),
+    to($color__accent)
+  );
+  background-image: linear-gradient(
+    to right,
+    $color__accent 0%,
+    $color__accent 100%
+  );
   background-position: bottom 0 center;
   background-size: 100% 2px;
   background-repeat: repeat-x;
   color: $color__accent;
   text-decoration: none;
-  text-shadow: 0.05em 0 0 $color__background-body, -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body, 0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body, -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body, 0 -0.1em 0 $color__background-body;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  text-shadow: 0.05em 0 0 $color__background-body,
+    -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body,
+    0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body,
+    -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body,
+    0 -0.1em 0 $color__background-body;
 }
 
 .posts-item__content a:hover,
 .posts-item__content a:focus {
   outline: 0;
-  background-size: 100% 4px;
-  color: $color__accent;
 }
 
 .posts-item__content > * + *:last-child {
@@ -1967,22 +2023,33 @@ a.pagination__item:focus {
 }
 
 .posts-item .more-link {
-  background-image: -webkit-gradient(linear, left top, right top, from($color__accent), to($color__accent));
-  background-image: linear-gradient(to right, $color__accent 0%, $color__accent 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from($color__accent),
+    to($color__accent)
+  );
+  background-image: linear-gradient(
+    to right,
+    $color__accent 0%,
+    $color__accent 100%
+  );
   background-position: bottom 0 center;
   background-size: 100% 2px;
   background-repeat: repeat-x;
   color: $color__accent;
   text-decoration: none;
-  text-shadow: 0.05em 0 0 $color__background-body, -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body, 0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body, -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body, 0 -0.1em 0 $color__background-body;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  text-shadow: 0.05em 0 0 $color__background-body,
+    -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body,
+    0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body,
+    -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body,
+    0 -0.1em 0 $color__background-body;
 }
 
 .posts-item .more-link:hover,
 .posts-item .more-link:focus {
   outline: 0;
-  background-size: 100% 4px;
   color: $color__accent;
 }
 
@@ -1994,16 +2061,11 @@ a.pagination__item:focus {
 }
 
 .entry-header {
-  padding: 0 1.5em;
+  padding: 0 2em;
 }
 
 .entry-content {
   margin: 2rem auto 0;
-}
-
-.entry-content > *:not(pre):not(ul):not(ol) {
-  padding-right: 1rem;
-  padding-left: 1rem;
 }
 
 .entry-content .outset {
@@ -2020,23 +2082,33 @@ a.pagination__item:focus {
 }
 
 .entry-content p a {
-  background-image: -webkit-gradient(linear, left top, right top, from($color__accent), to($color__accent));
-  background-image: linear-gradient(to right, $color__accent 0%, $color__accent 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from($color__accent),
+    to($color__accent)
+  );
+  background-image: linear-gradient(
+    to right,
+    $color__accent 0%,
+    $color__accent 100%
+  );
   background-position: bottom 0 center;
   background-size: 100% 2px;
   background-repeat: repeat-x;
   color: $color__accent;
   text-decoration: none;
-  text-shadow: 0.05em 0 0 $color__background-body, -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body, 0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body, -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body, 0 -0.1em 0 $color__background-body;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  text-shadow: 0.05em 0 0 $color__background-body,
+    -0.05em 0 0 $color__background-body, 0 0.05em 0 $color__background-body,
+    0 -0.05em 0 $color__background-body, 0.1em 0 0 $color__background-body,
+    -0.1em 0 0 $color__background-body, 0 0.1em 0 $color__background-body,
+    0 -0.1em 0 $color__background-body;
 }
 
 .entry-content p a:hover,
 .entry-content p a:focus {
   outline: 0;
-  background-size: 100% 4px;
-  color: $color__accent;
 }
 
 .entry-content blockquote.outset {
@@ -2133,11 +2205,14 @@ a.pagination__item:focus {
   margin: 2em auto;
 }
 
+.entry-content > *:not(pre):not(ul):not(ol) {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .entry-title {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 768px;
-  text-align: center;
+  max-width: 702px;
+  margin: 0 auto;
 }
 
 .entry-title a {
@@ -2155,15 +2230,13 @@ a.pagination__item:focus {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  padding: 2.2rem 0 0 2rem;
 }
 
 .entry-meta-item.last::after,
 .entry-meta-item:last-child::after {
   margin: 0;
-  content: '';
+  content: "";
 }
 
 .entry-thumbnail {
@@ -2192,6 +2265,42 @@ a.pagination__item:focus {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   max-width: 702px;
+}
+
+.entry-footnotes {
+  max-width: 702px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 2rem;
+}
+
+.entry-footnotes > hr:first-child {
+  width: 48px;
+  display: inline-block;
+}
+
+.entry-footnotes > ol {
+  padding-inline-start: 0px;
+
+  list-style: none;
+  counter-reset: bracketed-counter;
+}
+
+.entry-footnotes > ol li {
+  counter-increment: bracketed-counter;
+  margin-bottom: 8px;
+}
+
+.entry-footnotes > ol li:target {
+  background-color: $color__background-body-light;
+}
+
+.entry-footnotes > ol li::before {
+  content: "[" counter(bracketed-counter) "] ";
+}
+
+.entry-footnotes > ol > small {
+  font-size: 15px;
 }
 
 /* 404 */
@@ -2294,7 +2403,7 @@ blockquote.contact-form-submission {
 blockquote.contact-form-submission::after {
   display: table;
   clear: both;
-  content: '';
+  content: "";
 }
 
 blockquote.contact-form-submission p {
@@ -2308,7 +2417,7 @@ blockquote.contact-form-submission br {
 
 /* Contact Form 7 */
 
-input[type='submit'].wpcf7-submit {
+input[type="submit"].wpcf7-submit {
   border-color: $color__accent;
   background-color: $color__accent;
   color: #fff;
@@ -2411,13 +2520,13 @@ input[type='submit'].wpcf7-submit {
   width: 100%;
 }
 
-.integer-subscribe-form-input input[type='email'] {
+.integer-subscribe-form-input input[type="email"] {
   width: 100%;
   border-color: $color__background-body;
   background-color: $color__background-body;
 }
 
-.integer-subscribe-form-input input[type='email']:focus {
+.integer-subscribe-form-input input[type="email"]:focus {
   border-color: $color__accent;
 }
 
@@ -2447,9 +2556,35 @@ input[type='submit'].wpcf7-submit {
 
 @media only screen and (min-width: 702px) {
   .entry-content {
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
     max-width: 702px;
+  }
+
+  .entry-content > *:not(pre):not(ul):not(ol) {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+
+  .entry-meta-before-content {
+    padding: 2rem 0 0.2rem 0.2rem;
+  }
+
+  .entry-title {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+
+  .site-footer {
+    padding: 4rem 0.2rem 2rem;
+  }
+
+  .pagination {
+    padding: 0;
+  }
+
+  .entry-footnotes {
+    padding: 0.2rem;
+    padding-top: 2rem;
   }
 }
 
@@ -2486,8 +2621,6 @@ input[type='submit'].wpcf7-submit {
     -webkit-box-shadow: 0 0 3px $color__gray;
     box-shadow: 0 0 3px $color__gray;
     opacity: 1;
-    -webkit-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
@@ -2672,7 +2805,8 @@ input[type='submit'].wpcf7-submit {
   }
 
   .post-navigation {
-    margin-top: 8rem;
+    margin-top: 3rem;
+    padding: 0.2rem;
   }
 
   .post-navigation .nav-pre {
@@ -2697,7 +2831,7 @@ input[type='submit'].wpcf7-submit {
   }
 
   .entry-content {
-    margin: 4rem auto 0;
+    margin: 2rem auto 0;
     max-width: 702px;
   }
 
@@ -2759,7 +2893,7 @@ input[type='submit'].wpcf7-submit {
 
 @media only screen and (min-width: 1024px) {
   .site-header {
-    padding: 4rem 3rem;
+    padding: 4rem 3rem 3rem 2rem;
   }
 
   .widget-area-secondary {

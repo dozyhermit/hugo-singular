@@ -4,6 +4,7 @@
     <h1 class="entry-title">{{ .Title }}</h1>
   </header>
 
+   {{ if .PublishDate }} 
     <div class="entry-meta entry-meta-before-content">
       <span class="entry-meta-item posted-on">
         <a href="{{.Permalink}}">
@@ -11,10 +12,27 @@
         </a>
       </span>
     </div>
+    {{ end }}
 
 	<div class="entry-content">
-    {{ .Content }}
+    {{ .RawContent | replaceRE `(\[([1-9]+)\])` `[$1](PERMALINK#note-$2)` | replaceRE `PERMALINK` .Permalink | markdownify }}
   </div>
+
+  {{- if .Params.footnotes -}}
+<div class="entry-footnotes">
+  <span>Notes:</span>
+
+  <ol>
+    {{ range $index, $footnotes := (.Params.footnotes) }}
+    <small
+      ><li id="note-{{ add $index 1 }}">
+        {{ $footnotes | markdownify }}
+      </li></small
+    >
+    {{ end }}
+  </ol>
+</div>
+{{ end }}
 
   {{ if or .NextInSection .PrevInSection }}
   <nav class="navigation post-navigation" role="navigation" aria-label="Posts navigation">
